@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import styled, { keyframes } from "styled-components";
 
 const DisplayRed = styled.div`
-  background-color: red;
+  background-color: purple;
   color: white;
   height: 20px;
   margin: 10px;
@@ -49,11 +49,11 @@ const motion = keyframes`
   }
 }
 `;
-const Motion =styled.div`
-display:inline-block;
-animation:${motion} 4s linear;
-padding: 2rem 1rem;
-font-size: 1.2rem;
+const Motion = styled.div`
+  display: inline-block;
+  animation: ${motion} 4s linear;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
 `;
 function App() {
   return (
@@ -66,11 +66,13 @@ function App() {
       <Button>Normal</Button>
       <Button primary>Primary</Button>
       <SpecialButton>Button of Extended Styles</SpecialButton>
-      <br/>
+      <br />
       {/* "as" polymorphic prop */}
-     <Button as="a" href="/">Link with Button styles</Button>
-     <br/>
-     <Motion>Animation is happening here....</Motion>
+      <Button as="a" href="/">
+        Link with Button styles
+      </Button>
+      <br />
+      <Motion>Animation is happening here....</Motion>
     </>
   );
 }
